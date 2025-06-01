@@ -1,5 +1,6 @@
 #include "Game.hpp"
-#include <iostream>
+#include "Display.hpp"
+#include <string>
 
 Game::Game() {
   this->player = Player("NotBrioche");
@@ -12,6 +13,15 @@ int Game::getDay() { return day; }
 void Game::addDays(int days) { this->day += days; }
 
 void Game::showDefaultPage() {
-  std::cout << "Day " << this->day << std::endl;
-  std::cout << player.getName() << std::endl;
+  auto d = Display();
+
+  d.print({"Day " + std::to_string(this->day)}, CENTER);
+  d.print({"-"}, FILL);
+  d.print({this->player.getName(), "BOB"}, BETWEEN);
+  d.print({std::to_string(this->player.getGold()) + " gold"});
+  d.print({});
+  d.print({"Inventory"});
+  d.print({});
+  d.print({"Propose trade"});
+  d.print({"Walk by"});
 }
