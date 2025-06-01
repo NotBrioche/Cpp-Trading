@@ -1,7 +1,13 @@
 #include "Player.hpp"
 #include <algorithm>
 
-Player::Player(std::string name) { this->name = name; }
+Player::Player() {}
+
+Player::Player(std::string name) {
+  this->name = name;
+  this->gold = 0;
+  this->items = std::vector<Item>();
+}
 
 std::string Player::getName() { return name; }
 int Player::getGold() { return gold; }

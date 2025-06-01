@@ -14,7 +14,7 @@ src/%.o: src/%.cpp
 	$(COMPILER) $(CFLAGS) -c $< -o $@
 
 run: $(TARGET)
-	$(TARGET)
+	./$(TARGET)
 
 clean:
 	rm -f $(TARGET) $(OBJ)

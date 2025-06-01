@@ -7,3 +7,5 @@ Item::Item(std::string name, int price) {
 
 std::string Item::getName() { return this->name; }
 int Item::getPrice() { return this->price; }
+
+bool Item::operator==(const Item &i) { return this->name == i.name; }

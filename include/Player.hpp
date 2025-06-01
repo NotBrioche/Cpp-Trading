@@ -12,6 +12,7 @@ protected:
   std::vector<Item> items;
 
 public:
+  Player();
   Player(std::string name);
 
   std::string getName();

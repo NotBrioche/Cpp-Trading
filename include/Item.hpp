@@ -13,6 +13,8 @@ public:
 
   std::string getName();
   int getPrice();
+
+  bool operator==(const Item &i);
 };
 
 #endif
