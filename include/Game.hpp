@@ -17,6 +17,8 @@ public:
   void addDays(int days);
 
   void showDefaultPage();
+  void showPlayerInventoryPage();
+  void showWalkingPage(int seconds);
 };
 
 #endif
